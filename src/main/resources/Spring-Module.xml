@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="weatherService" class="com.etu.algrigorova.WeatherService"/>
+    <bean id="weatherParser" class="com.etu.algrigorova.WeatherParser"/>
+    <bean id="weatherToConsole" class="com.etu.algrigorova.WeatherToConsole">
+        <constructor-arg ref="weatherService"/>
+        <constructor-arg ref="weatherParser"/>
+    </bean>
+
+</beans>
