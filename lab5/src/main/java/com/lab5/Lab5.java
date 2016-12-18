@@ -17,7 +17,7 @@ public class Lab5 {
     static private Channel channel;
 
     @Bean
-    Service mockMessageService() {
+    public Service mockMessageService() {
         return () -> "Temperature in " + channel.getLocation().getCity() + " = " + channel.getItem().getCondition().getTemp();
     }
 

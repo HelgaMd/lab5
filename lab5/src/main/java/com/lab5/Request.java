@@ -12,7 +12,7 @@ import javax.xml.bind.JAXBException;
  * @author Dron
  */
 public class Request {
-    Channel request(String city) throws JAXBException, IOException {
+    public Channel request(String city) throws JAXBException, IOException {
         YahooWeatherService service = new YahooWeatherService();
 
         return service.getForecastForLocation(city, DegreeUnit.CELSIUS).first(3).get(0);
