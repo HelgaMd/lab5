@@ -14,7 +14,7 @@ import org.springframework.context.ApplicationContext;
 @Configuration
 @ComponentScan
 public class Lab5 {
-    static Channel channel;
+    static private Channel channel;
 
     @Bean
     Service mockMessageService() {
