@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+   <bean id="weatherService" class="com.modzal.WeatherService"/>
+   <bean id="weatherParser" class="com.modzal.WeatherParser"/>
+   <bean id="weatherPrinter" class="com.modzal.WeatherPrinter">
+        <constructor-arg ref="weatherService"/>
+         <constructor-arg ref="weatherParser"/>
+    </bean>
+   
+</beans>
